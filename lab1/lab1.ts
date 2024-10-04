@@ -21,9 +21,8 @@ function getAllworkers() {
   return workers;
 }
 
-const logFirstAvailable = (workers = getAllworkers()): void => {
-  const count_workers: number = workers.length;
-  console.log(`Кількість робітників: ${count_workers}`);
+const logFirstAvailable = (workers:{id: number, Name: string, surname: string, available: boolean, salary: number, category: Category}[] = getAllworkers()): void => {
+  console.log(`Кількість робітників: ${workers.length}`);
 
   for (let worker of workers) {
     if (worker.available) {
@@ -64,6 +63,7 @@ console.log(
   "-------------------------------------3-------------------------------\n"
 );
 console.log(Category.Developer,": ");
+
 getAllworkers().forEach(worker => {
   if(worker.category == Category.Developer)
     console.log(`Name: ${worker.Name}\nSurname: ${worker.surname}`);
@@ -73,7 +73,7 @@ console.log("\n")
 function getWorkerByID (id:number){
   return getAllworkers().find(worker=> worker.id === id)
 }
-console.log(getWorkerByID(3));
+console.table(getWorkerByID(3));
 
 console.log(
   "-------------------------------------4-------------------------------\n"
@@ -95,7 +95,7 @@ console.log(generatedID);
 
 
 console.log(
-  "\n-------------------------------------4-------------------------------\n"
+  "\n-------------------------------------5-------------------------------\n"
 );
 
 function createCustomer(name:string, age?:number, city?:string){
