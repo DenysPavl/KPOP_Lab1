@@ -118,8 +118,6 @@ console.log(
   );
 
  abstract class ReferenceItem{
-    /*private title:string;
-    private year:number;*/
     private _publisher: string =""
     protected department: string = "History" 
 
