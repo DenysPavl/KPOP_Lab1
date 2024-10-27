@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     <input [(ngModel)]="name" (ngModelChange)="reverseText()" placeholder="Текст">
     <h1>Текст: {{name}}</h1>
     <h1>Перевернутий текст: {{reversedName}}</h1>`
-    //templateUrl: './app.component.html'
 })
 export class AppComponent { 
   name: string = '';

@@ -1,0 +1,21 @@
+.dialog-container {
+    padding: 20px; /* Відступи всередині всього діалогу */
+    font-family: Arial, sans-serif; /* Задайте бажаний шрифт */
+  }
+  
+  .dialog-header {
+    font-size: 24px;
+    margin-bottom: 20px; /* Відступ під заголовком */
+  }
+  
+  .dialog-content p {
+    margin: 10px 0; /* Відступи між параграфами */
+  }
+  
+  .user-image {
+    display: block;
+    margin: 20px auto 0; /* Відступи навколо зображення */
+    width: 80px; /* Задайте бажаний розмір зображення */
+    height: 80px;
+    border-radius: 50%;
+  }

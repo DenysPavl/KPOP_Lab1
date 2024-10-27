@@ -1,0 +1,20 @@
+table {
+    min-width: 80%;
+    width: 80%;       /* Встановлює ширину таблиці на 80% */
+    margin: 0 auto;   /* Вирівнює таблицю по центру */
+    margin-top: 40px;
+  }
+h2{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+  background-color: #007bff;
+  z-index: 10;
+  cursor: pointer;
+}
+button::after{
+  background-color: #007bff;
+}
