@@ -18,6 +18,7 @@ export interface User {
   gender: string;
   phone: string;
   email: string;
+  password:string;
   imageUrl: string;
   address: string;
   age:number;
@@ -80,6 +81,7 @@ export class AppComponent {
         gender: user.gender,
         phone: user.phone,
         email: user.email,
+        password: user.login.password,
         imageUrl: user.picture.medium,
         birthday: user.dob.date,
         age: user.dob.age,

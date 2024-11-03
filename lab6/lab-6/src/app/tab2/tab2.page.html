@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Wishlist</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let user of wishlist" (click)="openUserCard(user)">
+      <ion-label>
+        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+        <p>Email: {{ user.email }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p>Password: {{ user.password }}</p>
+        <p>Phone: {{ user.phone }}</p>
+      </ion-label>
+  
+      
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="danger" (click)="clearWishlist()">Clear Wishlist</ion-button>
+</ion-content>

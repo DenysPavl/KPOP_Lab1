@@ -1,0 +1,7 @@
+{
+  "name": "ggg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
