@@ -1,0 +1,66 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="FORM">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Логин *</label>
+      <input id="username" formControlName="username" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="password">Пароль *</label>
+      <input id="password" type="password" formControlName="password" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="confirmPassword">Пароль (подтверждение) *</label>
+      <input id="confirmPassword" type="password" formControlName="confirmPassword" required />
+      <div *ngIf="registrationForm.hasError('mismatch')">Passwords do not match.</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="fullName">Полное имя *</label>
+      <input id="fullName" formControlName="fullName" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="email">E-mail адрес *</label>
+      <input id="email" formControlName="email" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="website">Домашняя страница:</label>
+      <input id="website" formControlName="website" />
+    </div>
+    
+    <div class="form-group">
+      <label for="icq">ICQ номер:</label>
+      <input id="icq" formControlName="icq" />
+    </div>
+    
+    <div class="form-group">
+      <label for="skype">Skype ник:</label>
+      <input id="skype" formControlName="skype" />
+    </div>
+    
+    <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+  </form>
+</div>
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />
